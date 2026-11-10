@@ -1,0 +1,57 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "curl2hey",
+  "title": "curl2hey",
+  "description": "convert a cURL to a hey command",
+  "icon": "extension-icon.png",
+  "author": "kuddl",
+  "platforms": [
+    "Windows",
+    "macOS"
+  ],
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "curl2hey",
+      "title": "curl2hey",
+      "subtitle": "convert curl to hey",
+      "description": "you can convert a cURL to hey",
+      "mode": "view"
+    }
+  ],
+  "tools": [],
+  "preferences": [
+    {
+      "name": "historyLimit",
+      "type": "textfield",
+      "title": "Verlaufs-Limit",
+      "description": "Anzahl der gespeicherten Konvertierungen (maskiert). Älteste Einträge fallen weg.",
+      "required": false,
+      "default": "10"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.10.1",
+    "@raycast/utils": "^2.2.7"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test src/lib/*.test.ts"
+  }
+}

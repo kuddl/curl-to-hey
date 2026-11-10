@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "raycast-docs": {
+      "url": "https://developers.raycast.com/~gitbook/mcp",
+      "exposure": "direct"
+    }
+  }
+}
